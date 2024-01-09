@@ -11,10 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tibo47.weatherPaname.ui.theme.WeatherPanameTheme
+import com.tibo47.weatherPaname.weather.usecase.GetCurrentTemperatureUseCase
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        GetCurrentTemperatureUseCase()()
+
         setContent {
             WeatherPanameTheme {
                 // A surface container using the 'background' color from the theme

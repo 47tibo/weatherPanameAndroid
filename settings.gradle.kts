@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "weatherPaname"
 include(":app")
+include(":weather")
