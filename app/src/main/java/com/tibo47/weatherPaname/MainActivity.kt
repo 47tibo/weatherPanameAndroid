@@ -12,12 +12,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tibo47.weatherPaname.ui.theme.WeatherPanameTheme
 import com.tibo47.weatherPaname.weather.usecase.GetCurrentTemperatureUseCase
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var useCase: GetCurrentTemperatureUseCase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        GetCurrentTemperatureUseCase()()
+        useCase()
 
         setContent {
             WeatherPanameTheme {
