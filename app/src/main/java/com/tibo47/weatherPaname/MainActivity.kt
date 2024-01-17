@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tibo47.weatherPaname.ui.theme.WeatherPanameTheme
-import com.tibo47.weatherPaname.weather.usecase.GetCurrentTemperatureUseCase
+import com.tibo47.weatherPaname.weather.usecase.GetCurrentHourTemperatureUseCase
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -19,7 +19,7 @@ import javax.inject.Inject
 class MainActivity : ComponentActivity() {
 
     @Inject
-    lateinit var useCase: GetCurrentTemperatureUseCase
+    lateinit var useCase: GetCurrentHourTemperatureUseCase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

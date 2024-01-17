@@ -1,0 +1,1 @@
+{"servers":[{"url":"http://localhost:8080"}],"openapi":"3.0.1","paths":{"/data/2.5/onecall":{"$ref":"./OpenWeather.yaml#/paths/~1data~12.5~1onecall"}},"info":{"title":"merged spec","description":"merged spec","version":"1.0.0"}}
