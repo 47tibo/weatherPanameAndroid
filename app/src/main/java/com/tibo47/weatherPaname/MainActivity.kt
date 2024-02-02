@@ -9,49 +9,46 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.lifecycleScope
 import com.tibo47.weatherPaname.ui.theme.WeatherPanameTheme
 import com.tibo47.weatherPaname.weather.usecase.GetCurrentHourTemperatureUseCase
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    @Inject
-    lateinit var useCase: GetCurrentHourTemperatureUseCase
+    @Inject lateinit var getCurrentHourTemperatureUseCase: GetCurrentHourTemperatureUseCase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        useCase()
+       getCurrentHourTemperatureUseCase()
+           .onEach { result ->
+               result.onSuccess { println(it) }
+           }
+           .launchIn(lifecycleScope)
 
-        setContent {
-            WeatherPanameTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+            setContent {
+                WeatherPanameTheme {
+                    // A surface container using the 'background' color from the theme
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colorScheme.background
+                    ) {
+                        Greeting("foo")
+                    }
                 }
             }
-        }
+
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String) {
     Text(
         text = "Hello $name!",
-        modifier = modifier
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    WeatherPanameTheme {
-        Greeting("Android")
-    }
 }
