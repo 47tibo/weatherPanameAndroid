@@ -8,13 +8,17 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.tibo47.weatherPaname.ui.theme.WeatherPanameTheme
 import com.tibo47.weatherPaname.weather.usecase.GetCurrentHourTemperatureUseCase
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -24,11 +28,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        getCurrentHourTemperatureUseCase()
-            .onEach { result ->
-                result.onSuccess { println(it) }
-            }
-            .launchIn(lifecycleScope)
+        val stateFlow: StateFlow<String> =
+            getCurrentHourTemperatureUseCase()
+                .map { result ->
+                    result.fold(
+                        onSuccess = { it.toString() },
+                        onFailure = { "error somewhere : $it" },
+                    )
+                }
+                .stateIn(lifecycleScope, WhileSubscribed(5_000), "Loading...")
 
         setContent {
             WeatherPanameTheme {
@@ -37,7 +45,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    Greeting("foo")
+                    DisplayTemperature(stateFlow)
                 }
             }
         }
@@ -45,8 +53,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun DisplayTemperature(state: StateFlow<String>) {
+    val temperature: String by state.collectAsStateWithLifecycle()
     Text(
-        text = "Hello $name!",
+        text = "Current temp in Paris is : $temperature",
     )
 }
