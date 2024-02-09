@@ -9,10 +9,13 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
-internal class WeatherRepository @Inject constructor(
-    private val remoteDataSource: WeatherRemoteDataSource,
-): WeatherGateway {
-    override val hourly: Flow<Result<HourlyWeather>> = flow {
-        emit(remoteDataSource.fetchHourlyWeather())
-    }.flowOn(Dispatchers.IO)
-}
+internal class WeatherRepository
+    @Inject
+    constructor(
+        private val remoteDataSource: WeatherRemoteDataSource,
+    ) : WeatherGateway {
+        override val hourly: Flow<Result<HourlyWeather>> =
+            flow {
+                emit(remoteDataSource.fetchHourlyWeather())
+            }.flowOn(Dispatchers.IO)
+    }

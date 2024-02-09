@@ -19,30 +19,28 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
     @Inject lateinit var getCurrentHourTemperatureUseCase: GetCurrentHourTemperatureUseCase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-       getCurrentHourTemperatureUseCase()
-           .onEach { result ->
-               result.onSuccess { println(it) }
-           }
-           .launchIn(lifecycleScope)
+        getCurrentHourTemperatureUseCase()
+            .onEach { result ->
+                result.onSuccess { println(it) }
+            }
+            .launchIn(lifecycleScope)
 
-            setContent {
-                WeatherPanameTheme {
-                    // A surface container using the 'background' color from the theme
-                    Surface(
-                        modifier = Modifier.fillMaxSize(),
-                        color = MaterialTheme.colorScheme.background
-                    ) {
-                        Greeting("foo")
-                    }
+        setContent {
+            WeatherPanameTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background,
+                ) {
+                    Greeting("foo")
                 }
             }
-
+        }
     }
 }
 

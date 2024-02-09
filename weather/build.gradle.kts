@@ -1,3 +1,6 @@
+import org.jmailen.gradle.kotlinter.tasks.FormatTask
+import org.jmailen.gradle.kotlinter.tasks.LintTask
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -6,6 +9,18 @@ plugins {
     id ("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
     id("org.jmailen.kotlinter")
+}
+
+val fileTree = fileTree("src/main")
+fileTree.include("**/*Dto.kt")
+fileTree.include("**/WeatherApi.kt")
+
+tasks.withType<LintTask> {
+    this.source = this.source.minus(fileTree).asFileTree
+}
+
+tasks.withType<FormatTask> {
+    this.source = this.source.minus(fileTree).asFileTree
 }
 
 android {

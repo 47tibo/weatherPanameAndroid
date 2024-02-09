@@ -7,10 +7,13 @@ import javax.inject.Inject
 /**
  * @return The temperature (Celsius) in downtown Paris at the current hour.
  */
-public class GetCurrentHourTemperatureUseCase @Inject constructor(
-    private val weatherRepository: WeatherGateway
-) {
-    public operator fun invoke(): Flow<Result<Float>> = weatherRepository.hourly.map { hourly ->
-        hourly.map { it.temperature }
+public class GetCurrentHourTemperatureUseCase
+    @Inject
+    constructor(
+        private val weatherRepository: WeatherGateway,
+    ) {
+        public operator fun invoke(): Flow<Result<Float>> =
+            weatherRepository.hourly.map { hourly ->
+                hourly.map { it.temperature }
+            }
     }
-}
