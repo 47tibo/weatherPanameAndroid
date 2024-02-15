@@ -14,5 +14,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "weatherPaname"
+include(":http-client")
 include(":app")
 include(":weather")

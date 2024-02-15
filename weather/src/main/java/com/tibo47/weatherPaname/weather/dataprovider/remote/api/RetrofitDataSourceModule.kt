@@ -1,14 +1,12 @@
 package com.tibo47.weatherPaname.weather.dataprovider.remote.api
 
+import com.tibo47.httpClient.RetrofitBuilder
 import com.tibo47.weatherPaname.weather.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -16,18 +14,10 @@ import javax.inject.Singleton
 internal object RetrofitDataSourceModule {
     @Provides
     @Singleton
-    internal fun providesApi(): WeatherApi {
-        return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(
-                OkHttpClient.Builder()
-                    .addInterceptor(
-                        HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC),
-                    )
-                    .build(),
-            )
+    internal fun providesWeatherApi(
+        @RetrofitBuilder builder: Retrofit.Builder,
+    ): WeatherApi =
+        builder
             .baseUrl(BuildConfig.BASE_URL)
-            .build()
-            .create(WeatherApi::class.java)
-    }
+            .build().create(WeatherApi::class.java)
 }
