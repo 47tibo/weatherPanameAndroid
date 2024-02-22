@@ -13,8 +13,7 @@ internal class WeatherAssembler
                     temperature = dto.hourly!!.first().temp!!.toFloat(),
                 )
             } else {
-                // return an empty entity if Retrofit gets a null body from HTTP response
-                HourlyWeatherEntity("N/A", 0.0F)
+                throw Exception("Null body from HTTP response")
             }
         }
     }
