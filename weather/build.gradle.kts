@@ -9,6 +9,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization")
     id("org.openapi.generator")
     id("org.jmailen.kotlinter")
+    id("org.jetbrains.kotlinx.kover")
 }
 
 val fileTree = fileTree("src/main")

@@ -10,7 +10,7 @@ plugins {
     id("com.google.devtools.ksp") version "1.9.20-1.0.14" apply false
 
     id("org.jmailen.kotlinter") version "4.1.1" apply false
-    id("org.jetbrains.kotlinx.kover") version "0.7.5"
+    id("org.jetbrains.kotlinx.kover") version "0.7.5" apply false
 
     id("org.openapi.generator") version "7.2.0" apply false
 }
