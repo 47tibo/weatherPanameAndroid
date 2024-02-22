@@ -30,7 +30,7 @@ import kotlinx.serialization.Contextual
  */
 @Serializable
 
-internal data class OneCall200ResponseDailyInnerWeatherInnerDto (
+public data class OneCall200ResponseDailyInnerWeatherInnerDto (
 
     @SerialName(value = "description")
     val description: kotlin.String? = null,

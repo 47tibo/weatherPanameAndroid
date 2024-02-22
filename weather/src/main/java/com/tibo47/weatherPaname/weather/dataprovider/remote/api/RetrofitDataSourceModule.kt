@@ -1,6 +1,5 @@
 package com.tibo47.weatherPaname.weather.dataprovider.remote.api
 
-import com.tibo47.httpClient.RetrofitBuilder
 import com.tibo47.weatherPaname.weather.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -11,12 +10,10 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object RetrofitDataSourceModule {
+public object RetrofitDataSourceModule {
     @Provides
     @Singleton
-    internal fun providesWeatherApi(
-        @RetrofitBuilder builder: Retrofit.Builder,
-    ): WeatherApi =
+    public fun providesWeatherApi(builder: Retrofit.Builder): WeatherApi =
         builder
             .baseUrl(BuildConfig.BASE_URL)
             .build().create(WeatherApi::class.java)

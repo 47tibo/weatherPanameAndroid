@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 
 import com.tibo47.weatherPaname.weather.dataprovider.remote.dto.OneCall200ResponseDto
 
-internal interface WeatherApi {
+public interface WeatherApi {
     /**
      * one call
      * one call
@@ -22,6 +22,6 @@ internal interface WeatherApi {
      * @return [OneCall200ResponseDto]
      */
     @GET("data/2.5/onecall")
-    suspend fun oneCall(@Query("lat") lat: kotlin.String? = null, @Query("lon") lon: kotlin.String? = null, @Query("appid") appid: kotlin.String? = null, @Query("units") units: kotlin.String? = null): Response<OneCall200ResponseDto>
+    public suspend fun oneCall(@Query("lat") lat: kotlin.String? = null, @Query("lon") lon: kotlin.String? = null, @Query("appid") appid: kotlin.String? = null, @Query("units") units: kotlin.String? = null): Response<OneCall200ResponseDto>
 
 }

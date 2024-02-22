@@ -40,7 +40,7 @@ import kotlinx.serialization.Contextual
  */
 @Serializable
 
-internal data class OneCall200ResponseDto (
+public data class OneCall200ResponseDto (
 
     @SerialName(value = "alerts")
     val alerts: kotlin.collections.List<OneCall200ResponseAlertsInnerDto>? = null,

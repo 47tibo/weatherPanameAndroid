@@ -28,7 +28,7 @@ import kotlinx.serialization.Contextual
  */
 @Serializable
 
-internal data class OneCall200ResponseMinutelyInnerDto (
+public data class OneCall200ResponseMinutelyInnerDto (
 
     @Contextual @SerialName(value = "dt")
     val dt: java.math.BigDecimal? = null,

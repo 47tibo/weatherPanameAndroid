@@ -26,11 +26,17 @@ android {
 
     buildTypes {
         release {
+            resValue("string", "clear_text_config","false")
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+
+        debug {
+            resValue("string", "clear_text_config","true")
         }
     }
     kotlin {
@@ -50,8 +56,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":http-client")) // to mock http calls for end2end tests
-
     implementation(project(":weather"))
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -69,6 +73,7 @@ dependencies {
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.50")
 
     testImplementation("junit:junit:4.13.2")
+
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1") // for AndroidJUnitRunner
@@ -76,7 +81,8 @@ dependencies {
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
-
+    androidTestImplementation("com.squareup.retrofit2:retrofit:2.9.0") // for types
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")

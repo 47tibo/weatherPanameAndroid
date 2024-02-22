@@ -6,17 +6,8 @@ component, on usage.
 
 Bindings are :
 
-## `Retrofit.Builder` "real", with `@RetrofitBuilder` qualifier
+## `Retrofit.Builder`
 
 A Retrofit factory with :
 - GsonConverterFactory
 - HttpLoggingInterceptor
-
-## `Retrofit.Builder` "mocked", with `@MockedRetrofitBuilder` qualifier
-
-A Retrofit factory with :
-- GsonConverterFactory
-- no interceptor
-- MockWebServer that proxies http requests to `localhost`
-
-Can be use in end2end testing.

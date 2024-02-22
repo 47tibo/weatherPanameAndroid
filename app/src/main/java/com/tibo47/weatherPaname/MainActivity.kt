@@ -55,10 +55,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DisplayTemperature(state: StateFlow<String>) {
     val temperature: String by state.collectAsStateWithLifecycle()
-/*    Text(
-        text = "Current temp in Paris is : $temperature",
-    )*/
     Text(
-        text = "foo",
+        text = "Current temp in Paris is : $temperature",
     )
 }

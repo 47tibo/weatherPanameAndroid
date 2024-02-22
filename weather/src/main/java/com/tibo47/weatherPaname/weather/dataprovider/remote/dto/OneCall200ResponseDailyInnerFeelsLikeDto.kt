@@ -30,7 +30,7 @@ import kotlinx.serialization.Contextual
  */
 @Serializable
 
-internal data class OneCall200ResponseDailyInnerFeelsLikeDto (
+public data class OneCall200ResponseDailyInnerFeelsLikeDto (
 
     @Contextual @SerialName(value = "day")
     val day: java.math.BigDecimal? = null,

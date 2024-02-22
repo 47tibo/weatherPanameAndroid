@@ -44,7 +44,7 @@ import kotlinx.serialization.Contextual
  */
 @Serializable
 
-internal data class OneCall200ResponseCurrentDto (
+public data class OneCall200ResponseCurrentDto (
 
     @Contextual @SerialName(value = "clouds")
     val clouds: java.math.BigDecimal? = null,
