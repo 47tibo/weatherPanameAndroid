@@ -29,7 +29,7 @@ class MainActivityTest {
     @Before
     fun setUp() {
         val body = ResourceReader.readText("OpenWeather_response200.json")
-        server.enqueue(MockResponse().setBody(body).setBodyDelay(1000L, TimeUnit.MILLISECONDS).setResponseCode(200))
+        server.enqueue(MockResponse().setBody(body).setBodyDelay(50L, TimeUnit.MILLISECONDS).setResponseCode(200))
         server.start(8080)
     }
 

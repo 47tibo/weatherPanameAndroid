@@ -1,15 +1,9 @@
-<mxfile host="Electron" modified="2024-02-22T16:01:04.228Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="y8Rcv5Q2wDFW6HZfUhyR" version="23.1.5" type="device">
+<mxfile host="Electron" modified="2024-02-26T10:36:05.144Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="WPrTRcY63tKHH9mAjod2" version="23.1.5" type="device">
   <diagram name="Page-1" id="wv4Ve9XhU9uI4jX8m3nt">
-    <mxGraphModel dx="3816" dy="3769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1049" dy="3060" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ZxqrqJX_Cj1t-atZ2je_-12" value="root package = com.tibo47.weatherPaname" style="text;strokeColor=none;fillColor=none;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontFamily=Courier New;" parent="1" vertex="1">
-          <mxGeometry x="10" y="5" width="210" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="hMdCMSUUUF6F1jB6uKyC-11" value="weather" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Courier New;" parent="1" vertex="1">
-          <mxGeometry x="50" y="80" width="350" height="450" as="geometry" />
-        </mxCell>
         <mxCell id="hMdCMSUUUF6F1jB6uKyC-23" value="weather" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Courier New;" parent="1" vertex="1">
           <mxGeometry x="430" y="63.4" width="1210" height="1466.6" as="geometry" />
         </mxCell>
@@ -164,7 +158,7 @@
           <mxGeometry x="895" y="1210" width="360" height="110" as="geometry" />
         </mxCell>
         <mxCell id="c7AoepRtp2JlIjNg5JvS-1" value="&lt;h1&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;Application graph&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="1080" y="-90" width="410" height="30" as="geometry" />
+          <mxGeometry x="1060" y="-1410" width="410" height="30" as="geometry" />
         </mxCell>
         <mxCell id="c7AoepRtp2JlIjNg5JvS-2" value="&amp;lt;I&amp;gt;" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontFamily=Courier New;" parent="1" vertex="1">
           <mxGeometry x="758.5728571428571" y="1043.4" width="51.42857142857142" height="30" as="geometry" />
@@ -221,14 +215,26 @@
         <mxCell id="qZRAYoZQ3BBoxbXVwMjG-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;HttpClientModule&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 11px;&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 11px;&quot;&gt;(@root)&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;font-size: 11px;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;; background-color: initial;&quot;&gt;+ providesRetrofitBuilder(): Retrofit.Builder&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="542.8600000000001" y="1880" width="347.14" height="290" as="geometry" />
         </mxCell>
-        <mxCell id="qZRAYoZQ3BBoxbXVwMjG-3" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Courier New&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;package = com.tibo47.httpClient&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="qZRAYoZQ3BBoxbXVwMjG-3" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Courier New&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;com.tibo47.httpClient&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="455" y="1720" width="410" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="JZZzyyRM093N0obc8tCL-2" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=halfCircle;endFill=0;endSize=15;strokeWidth=1;sketch=0;fontSize=12;curved=1;startSize=15;" edge="1" parent="1">
+        <mxCell id="JZZzyyRM093N0obc8tCL-2" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=halfCircle;endFill=0;endSize=15;strokeWidth=1;sketch=0;fontSize=12;curved=1;startSize=15;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1170" y="1089.19" as="sourcePoint" />
             <mxPoint x="1720" y="1089" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ZxqrqJX_Cj1t-atZ2je_-12" value="com.tibo47.weatherPaname.weather" style="text;strokeColor=none;fillColor=none;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="440" y="63.4" width="340" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="5DD99luaPqPGxmcdbhe--15" value="weather" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="430" y="-570" width="930" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="5DD99luaPqPGxmcdbhe--1" value="com.tibo47.weatherPaname.hilt" style="text;strokeColor=none;fillColor=none;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="460" y="-560" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5DD99luaPqPGxmcdbhe--16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;DispatcherModule&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 11px;&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 11px;&quot;&gt;(.dispatcher)&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;font-size: 11px;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;@Dispatcher(Default)&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;; background-color: initial;&quot;&gt;+ providesDispatcherDefault(): CoroutineDispatcher&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color);&quot; face=&quot;Courier New&quot;&gt;@Dispatcher(IO)&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;+providesDispatcherIO(): CoroutineDispatcher&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="490.0000000000001" y="-480" width="347.14" height="290" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

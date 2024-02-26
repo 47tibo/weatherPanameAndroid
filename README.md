@@ -20,6 +20,7 @@ Personal choices :
 - for functions arguments, the default is positional. Indeed Android Studio gives enough intel on arguments.
 I use named arguments only for disambiguation, when optional arguments are in the function's signature.
 - for abbreviations, I use capitalize case, not screaming case. Eg : Dto, not DTO
+- tests files (unit and e2e) use `Test` in their names : as a prefix for _stubs_ and as suffix for _tests classes_
 
 ### Weather data API
 
@@ -44,7 +45,7 @@ Once the proper scheme is created, in order to generate the API, simply run :
 - Hilt for DI
 - Retrofit for network requests
 - Ktlint for linting, runs on pre-push
-- Kover for code coverage runs on Bitrise
+- Kover for code coverage runs on Bitrise (release flavor)
 
 ### Application architecture
 

@@ -13,7 +13,7 @@ import retrofit2.Retrofit
     components = [SingletonComponent::class],
     replaces = [RetrofitDataSourceModule::class],
 )
-internal object RetrofitDataSourceTestModule {
+internal object TestRetrofitDataSourceModule {
     @Provides
     fun providesWeatherApi(builder: Retrofit.Builder): WeatherApi =
         builder.baseUrl("http://localhost:8080/").build().create(WeatherApi::class.java)
