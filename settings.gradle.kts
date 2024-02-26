@@ -17,3 +17,4 @@ rootProject.name = "weatherPaname"
 include(":http-client")
 include(":app")
 include(":weather")
+include(":daily-weather-ui")
