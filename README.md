@@ -65,8 +65,37 @@ Data flows contain Kotlin's `Result`, which are created on the lowest level (in 
 in the network layer implementation. This in order to wrap exceptions as soon as possible, as recommended 
 in this [Kotlin Conf talk](https://www.youtube.com/watch?v=pvYAQNT4o0I).
 
-#### `weather`component
+**All the following components are packaged as gradle subprojects.**
 
-This component is an android library, packaged as a gradle subproject. It contains all the business and data-providing
-logic to retrieve and expose data about Paris' weather. It strictly follows encapsulation and dependency rule,
-using `internal` modifiers and `interfaces` (to define contracts and for DIP, when needed).
+### Application components
+
+They strictly follows encapsulation and dependency rule, using `interfaces` to define contracts (and for DIP, when needed).
+Libraries are encapsulated using `internal` modifier.
+
+They are under the `com.tibo47.weatherPaname` package.
+
+#### `app` component
+
+This component is at the lower level in the architecture. It bootstrap the main activity & application.
+It connects ui component (see bellow) via navigation. It contains material design 3 theme.
+Its android test target provides e2e tests.
+
+#### `weather` component
+
+This component is an android library. It contains all the business and data-providing
+logic to retrieve and expose data about Paris' weather. It only exposes OpenWeather Retrofit API & uses cases.
+
+#### `daily-weather-ui` component
+
+This component is an android library. It contains ui components to display the main screen for the
+current weather.
+
+### External components
+
+#### `http-client` component
+
+Under `com.tibo47.httpClient` package.
+
+Exposes a Retrofit factory with :
+- GsonConverterFactory
+- HttpLoggingInterceptor
