@@ -67,6 +67,8 @@ dependencies {
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.material3:material3")
 
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
     implementation("com.google.dagger:hilt-android:2.50")
     ksp("com.google.dagger:hilt-android-compiler:2.48.1")
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.50")

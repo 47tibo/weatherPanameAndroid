@@ -10,7 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
-import com.tibo47.weatherPaname.theme.ApplicationTheme
+import com.tibo47.weatherPaname.theme.MainTheme
 import com.tibo47.weatherPaname.ui.MainApplicationScreen
 import com.tibo47.weatherPaname.weather.usecase.GetCurrentHourTemperatureUseCase
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,14 +38,14 @@ class MainActivity : ComponentActivity() {
                 .stateIn(lifecycleScope, WhileSubscribed(5_000), "Loading...")
 
         setContent {
-            ApplicationTheme {
+            MainTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
                     val temperature: String by stateFlow.collectAsStateWithLifecycle()
-                    MainApplicationScreen(temperature)
+                    MainApplicationScreen()
                 }
             }
         }
