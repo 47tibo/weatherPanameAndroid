@@ -11,8 +11,6 @@ internal fun DailyWeatherScreen(temperature: String) {
         Text(
             text = "Current temp in Paris is : $temperature",
         )
-        Button(onClick = { /*TODO*/ }) {
-            Text(text = "hello")
-        }
+        SunPosition()
     }
 }
