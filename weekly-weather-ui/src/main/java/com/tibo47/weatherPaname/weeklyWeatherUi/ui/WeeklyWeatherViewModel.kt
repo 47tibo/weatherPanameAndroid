@@ -1,4 +1,4 @@
-package com.tibo47.weatherPaname.dailyWeatherUi.ui
+package com.tibo47.weatherPaname.weeklyWeatherUi.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 @HiltViewModel
-internal class DailyWeatherViewModel
+internal class WeeklyWeatherViewModel
     @Inject
     constructor(
         private val getCurrentHourTemperatureUseCase: GetCurrentHourTemperatureUseCase,

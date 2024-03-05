@@ -1,4 +1,4 @@
-package com.tibo47.weatherPaname.dailyWeatherUi
+package com.tibo47.weatherPaname.weeklyWeatherUi
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

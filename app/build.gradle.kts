@@ -57,7 +57,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":daily-weather-ui"))
+    implementation(project(":weekly-weather-ui"))
     androidTestImplementation(project(":weather")) // for WeatherApi testing
 
     implementation("androidx.activity:activity-compose:1.8.2")

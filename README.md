@@ -87,7 +87,7 @@ Its android test target provides e2e tests.
 This component is an android library. It contains all the business and data-providing
 logic to retrieve and expose data about Paris' weather. It only exposes OpenWeather Retrofit API & uses cases.
 
-#### `daily-weather-ui` component
+#### `weekly-weather-ui` component
 
 This component is an android library. It contains ui components to display the main screen for the
 current weather.
