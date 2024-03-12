@@ -34,23 +34,23 @@ import kotlinx.serialization.Contextual
 
 public data class OneCall200ResponseDailyInnerTempDto (
 
-    @Contextual @SerialName(value = "day")
-    val day: java.math.BigDecimal? = null,
+    @SerialName(value = "day")
+    val day: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "eve")
-    val eve: java.math.BigDecimal? = null,
+    @SerialName(value = "eve")
+    val eve: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "max")
-    val max: java.math.BigDecimal? = null,
+    @SerialName(value = "max")
+    val max: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "min")
-    val min: java.math.BigDecimal? = null,
+    @SerialName(value = "min")
+    val min: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "morn")
-    val morn: java.math.BigDecimal? = null,
+    @SerialName(value = "morn")
+    val morn: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "night")
-    val night: java.math.BigDecimal? = null
+    @SerialName(value = "night")
+    val night: kotlin.Float? = null
 
 )
 

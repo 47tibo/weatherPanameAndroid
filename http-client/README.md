@@ -8,6 +8,6 @@ Bindings are :
 
 ## `Retrofit.Builder`
 
-A Retrofit factory with :
-- GsonConverterFactory
+A Retrofit factory configured with :
+- KotlinX Serialization Json with Jake Wharton converter
 - HttpLoggingInterceptor

@@ -30,11 +30,11 @@ import kotlinx.serialization.Contextual
 
 public data class OneCall200ResponseMinutelyInnerDto (
 
-    @Contextual @SerialName(value = "dt")
-    val dt: java.math.BigDecimal? = null,
+    @SerialName(value = "dt")
+    val dt: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "precipitation")
-    val precipitation: java.math.BigDecimal? = null
+    @SerialName(value = "precipitation")
+    val precipitation: kotlin.Float? = null
 
 )
 

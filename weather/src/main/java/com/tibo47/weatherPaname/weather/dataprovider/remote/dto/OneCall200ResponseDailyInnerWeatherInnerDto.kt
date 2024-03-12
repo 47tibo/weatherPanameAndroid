@@ -38,8 +38,8 @@ public data class OneCall200ResponseDailyInnerWeatherInnerDto (
     @SerialName(value = "icon")
     val icon: kotlin.String? = null,
 
-    @Contextual @SerialName(value = "id")
-    val id: java.math.BigDecimal? = null,
+    @SerialName(value = "id")
+    val id: kotlin.Float? = null,
 
     @SerialName(value = "main")
     val main: kotlin.String? = null

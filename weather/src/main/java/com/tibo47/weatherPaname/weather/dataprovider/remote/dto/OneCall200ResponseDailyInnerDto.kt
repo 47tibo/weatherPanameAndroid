@@ -51,65 +51,65 @@ import kotlinx.serialization.Contextual
 
 public data class OneCall200ResponseDailyInnerDto (
 
-    @Contextual @SerialName(value = "clouds")
-    val clouds: java.math.BigDecimal? = null,
+    @SerialName(value = "clouds")
+    val clouds: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "dew_point")
-    val dewPoint: java.math.BigDecimal? = null,
+    @SerialName(value = "dew_point")
+    val dewPoint: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "dt")
-    val dt: java.math.BigDecimal? = null,
+    @SerialName(value = "dt")
+    val dt: kotlin.Float? = null,
 
     @SerialName(value = "feels_like")
     val feelsLike: OneCall200ResponseDailyInnerFeelsLikeDto? = null,
 
-    @Contextual @SerialName(value = "humidity")
-    val humidity: java.math.BigDecimal? = null,
+    @SerialName(value = "humidity")
+    val humidity: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "moon_phase")
-    val moonPhase: java.math.BigDecimal? = null,
+    @SerialName(value = "moon_phase")
+    val moonPhase: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "moonrise")
-    val moonrise: java.math.BigDecimal? = null,
+    @SerialName(value = "moonrise")
+    val moonrise: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "moonset")
-    val moonset: java.math.BigDecimal? = null,
+    @SerialName(value = "moonset")
+    val moonset: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "pop")
-    val pop: java.math.BigDecimal? = null,
+    @SerialName(value = "pop")
+    val pop: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "pressure")
-    val pressure: java.math.BigDecimal? = null,
+    @SerialName(value = "pressure")
+    val pressure: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "rain")
-    val rain: java.math.BigDecimal? = null,
+    @SerialName(value = "rain")
+    val rain: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "snow")
-    val snow: java.math.BigDecimal? = null,
+    @SerialName(value = "snow")
+    val snow: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "sunrise")
-    val sunrise: java.math.BigDecimal? = null,
+    @SerialName(value = "sunrise")
+    val sunrise: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "sunset")
-    val sunset: java.math.BigDecimal? = null,
+    @SerialName(value = "sunset")
+    val sunset: kotlin.Float? = null,
 
     @SerialName(value = "temp")
     val temp: OneCall200ResponseDailyInnerTempDto? = null,
 
-    @Contextual @SerialName(value = "uvi")
-    val uvi: java.math.BigDecimal? = null,
+    @SerialName(value = "uvi")
+    val uvi: kotlin.Float? = null,
 
     @SerialName(value = "weather")
     val weather: kotlin.collections.List<OneCall200ResponseDailyInnerWeatherInnerDto>? = null,
 
-    @Contextual @SerialName(value = "wind_deg")
-    val windDeg: java.math.BigDecimal? = null,
+    @SerialName(value = "wind_deg")
+    val windDeg: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "wind_gust")
-    val windGust: java.math.BigDecimal? = null,
+    @SerialName(value = "wind_gust")
+    val windGust: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "wind_speed")
-    val windSpeed: java.math.BigDecimal? = null
+    @SerialName(value = "wind_speed")
+    val windSpeed: kotlin.Float? = null
 
 )
 

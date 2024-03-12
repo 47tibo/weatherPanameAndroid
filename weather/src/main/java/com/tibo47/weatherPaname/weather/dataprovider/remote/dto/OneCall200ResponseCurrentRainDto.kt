@@ -29,8 +29,8 @@ import kotlinx.serialization.Contextual
 
 public data class OneCall200ResponseCurrentRainDto (
 
-    @Contextual @SerialName(value = "1h")
-    val `1h`: java.math.BigDecimal? = null
+    @SerialName(value = "1h")
+    val `1h`: kotlin.Float? = null
 
 )
 

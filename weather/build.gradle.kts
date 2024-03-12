@@ -81,12 +81,14 @@ openApiGenerate {
         "library" to "jvm-retrofit2",
         "serializationLibrary" to "kotlinx_serialization",
     )
+    typeMappings = mapOf(
+        "number" to "kotlin.Float",
+    )
 }
 
 dependencies {
     implementation(project(":http-client"))
 
-    implementation("androidx.core:core-ktx:1.12.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 
@@ -94,6 +96,7 @@ dependencies {
     ksp("com.google.dagger:hilt-android-compiler:2.48.1")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2")
 
     // for generated DTOs
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")

@@ -45,50 +45,50 @@ import kotlinx.serialization.Contextual
 
 public data class OneCall200ResponseHourlyInnerDto (
 
-    @Contextual @SerialName(value = "clouds")
-    val clouds: java.math.BigDecimal? = null,
+    @SerialName(value = "clouds")
+    val clouds: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "dew_point")
-    val dewPoint: java.math.BigDecimal? = null,
+    @SerialName(value = "dew_point")
+    val dewPoint: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "dt")
-    val dt: java.math.BigDecimal? = null,
+    @SerialName(value = "dt")
+    val dt: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "feels_like")
-    val feelsLike: java.math.BigDecimal? = null,
+    @SerialName(value = "feels_like")
+    val feelsLike: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "humidity")
-    val humidity: java.math.BigDecimal? = null,
+    @SerialName(value = "humidity")
+    val humidity: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "pop")
-    val pop: java.math.BigDecimal? = null,
+    @SerialName(value = "pop")
+    val pop: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "pressure")
-    val pressure: java.math.BigDecimal? = null,
+    @SerialName(value = "pressure")
+    val pressure: kotlin.Float? = null,
 
     @SerialName(value = "rain")
     val rain: OneCall200ResponseHourlyInnerRainDto? = null,
 
-    @Contextual @SerialName(value = "temp")
-    val temp: java.math.BigDecimal? = null,
+    @SerialName(value = "temp")
+    val temp: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "uvi")
-    val uvi: java.math.BigDecimal? = null,
+    @SerialName(value = "uvi")
+    val uvi: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "visibility")
-    val visibility: java.math.BigDecimal? = null,
+    @SerialName(value = "visibility")
+    val visibility: kotlin.Float? = null,
 
     @SerialName(value = "weather")
     val weather: kotlin.collections.List<OneCall200ResponseCurrentWeatherInnerDto>? = null,
 
-    @Contextual @SerialName(value = "wind_deg")
-    val windDeg: java.math.BigDecimal? = null,
+    @SerialName(value = "wind_deg")
+    val windDeg: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "wind_gust")
-    val windGust: java.math.BigDecimal? = null,
+    @SerialName(value = "wind_gust")
+    val windGust: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "wind_speed")
-    val windSpeed: java.math.BigDecimal? = null
+    @SerialName(value = "wind_speed")
+    val windSpeed: kotlin.Float? = null
 
 )
 

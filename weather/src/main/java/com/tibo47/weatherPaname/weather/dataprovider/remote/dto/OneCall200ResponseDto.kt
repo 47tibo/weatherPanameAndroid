@@ -54,11 +54,11 @@ public data class OneCall200ResponseDto (
     @SerialName(value = "hourly")
     val hourly: kotlin.collections.List<OneCall200ResponseHourlyInnerDto>? = null,
 
-    @Contextual @SerialName(value = "lat")
-    val lat: java.math.BigDecimal? = null,
+    @SerialName(value = "lat")
+    val lat: kotlin.Float? = null,
 
-    @Contextual @SerialName(value = "lon")
-    val lon: java.math.BigDecimal? = null,
+    @SerialName(value = "lon")
+    val lon: kotlin.Float? = null,
 
     @SerialName(value = "minutely")
     val minutely: kotlin.collections.List<OneCall200ResponseMinutelyInnerDto>? = null,
@@ -66,8 +66,8 @@ public data class OneCall200ResponseDto (
     @SerialName(value = "timezone")
     val timezone: kotlin.String? = null,
 
-    @Contextual @SerialName(value = "timezone_offset")
-    val timezoneOffset: java.math.BigDecimal? = null
+    @SerialName(value = "timezone_offset")
+    val timezoneOffset: kotlin.Float? = null
 
 )
 

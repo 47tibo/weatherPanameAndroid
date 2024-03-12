@@ -37,8 +37,8 @@ public data class OneCall200ResponseAlertsInnerDto (
     @SerialName(value = "description")
     val description: kotlin.String? = null,
 
-    @Contextual @SerialName(value = "end")
-    val end: java.math.BigDecimal? = null,
+    @SerialName(value = "end")
+    val end: kotlin.Float? = null,
 
     @SerialName(value = "event")
     val event: kotlin.String? = null,
@@ -46,8 +46,8 @@ public data class OneCall200ResponseAlertsInnerDto (
     @SerialName(value = "sender_name")
     val senderName: kotlin.String? = null,
 
-    @Contextual @SerialName(value = "start")
-    val start: java.math.BigDecimal? = null,
+    @SerialName(value = "start")
+    val start: kotlin.Float? = null,
 
     @SerialName(value = "tags")
     val tags: kotlin.collections.List<kotlin.String>? = null

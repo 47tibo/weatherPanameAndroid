@@ -19,7 +19,7 @@ internal class WeeklyWeatherViewModel
             getCurrentHourTemperatureUseCase().map { result ->
                 result.fold(
                     onSuccess = { it.toString() },
-                    onFailure = { "error when accessing temp : ${it.message}" },
+                    onFailure = { "error when accessing temp : $it" },
                 )
             }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(2_000, 0), "Loading...")
     }
