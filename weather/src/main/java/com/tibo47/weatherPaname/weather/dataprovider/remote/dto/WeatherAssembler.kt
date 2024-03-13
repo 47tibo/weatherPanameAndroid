@@ -8,15 +8,16 @@ import javax.inject.Inject
 internal class WeatherAssembler
     @Inject
     constructor() {
-        fun createHourlyWeather(dto: OneCall200ResponseDto?): HourlyWeather {
+        fun createHourlies(dto: OneCall200ResponseDto?): List<HourlyWeather> {
             return if (dto != null) {
-                val currentHourlyWeather = dto.hourly!!.first()
-                HourlyWeatherEntity(
-                    temperature = currentHourlyWeather.temp!!,
-                    timestamp = Instant.fromEpochMilliseconds(currentHourlyWeather.dt!!.toLong()),
-                    windSpeed = currentHourlyWeather.windSpeed!!,
-                    windDirection = currentHourlyWeather.windDeg!!,
-                )
+                dto.hourly!!.map {
+                    HourlyWeatherEntity(
+                        temperature = it.temp!!,
+                        timestamp = Instant.fromEpochMilliseconds(it.dt!!.toLong()),
+                        windSpeed = it.windSpeed!!,
+                        windDirection = it.windDeg!!,
+                    )
+                }
             } else {
                 throw Exception("Null body from HTTP response")
             }

@@ -17,8 +17,8 @@ internal class WeatherRepository
         private val remoteDataSource: WeatherRemoteDataSource,
         @Dispatcher(DispatcherQualifier.IO) private val dispatcher: CoroutineDispatcher,
     ) : WeatherGateway {
-        override val hourly: Flow<Result<HourlyWeather>> =
+        override val hourlies: Flow<Result<List<HourlyWeather>>> =
             flow {
-                emit(remoteDataSource.fetchHourlyWeather())
+                emit(remoteDataSource.fetchHourlies())
             }.flowOn(dispatcher)
     }

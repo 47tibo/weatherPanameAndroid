@@ -11,5 +11,5 @@ public enum class HourlySegment {
 
 public interface DailyWeather {
     public val timestamp: Instant
-    public val hourly: Map<HourlySegment, HourlyWeather>
+    public val hourlies: Map<HourlySegment, HourlyWeather>
 }

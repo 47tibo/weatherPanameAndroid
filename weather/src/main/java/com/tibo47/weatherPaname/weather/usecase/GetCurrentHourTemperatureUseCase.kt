@@ -15,7 +15,7 @@ public class GetCurrentHourTemperatureUseCase
         private val weatherRepository: WeatherGateway,
     ) {
         public operator fun invoke(): Flow<Result<Float>> =
-            weatherRepository.hourly.map { hourly ->
-                hourly.map { it.temperature }
+            weatherRepository.hourlies.map { hourlyList ->
+                hourlyList.map { it.first().temperature }
             }
     }

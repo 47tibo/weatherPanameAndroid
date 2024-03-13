@@ -12,7 +12,7 @@ internal class RetrofitDataSource
         private val api: WeatherApi,
         private val weatherAssembler: WeatherAssembler,
     ) : WeatherRemoteDataSource {
-        override suspend fun fetchHourlyWeather(): Result<HourlyWeather> {
+        override suspend fun fetchHourlies(): Result<List<HourlyWeather>> {
             return runCatching {
                 // Paris GPS coordinates
                 val dto =
@@ -22,7 +22,7 @@ internal class RetrofitDataSource
                         BuildConfig.OPEN_WEATHER_APP_ID,
                         "metric",
                     )
-                weatherAssembler.createHourlyWeather(dto.body())
+                weatherAssembler.createHourlies(dto.body())
             }
         }
     }

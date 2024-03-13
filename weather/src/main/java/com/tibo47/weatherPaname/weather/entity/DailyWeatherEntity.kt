@@ -4,5 +4,5 @@ import kotlinx.datetime.Instant
 
 internal class DailyWeatherEntity(
     override val timestamp: Instant,
-    override val hourly: Map<HourlySegment, HourlyWeather>,
+    override val hourlies: Map<HourlySegment, HourlyWeather>,
 ) : DailyWeather
