@@ -13,7 +13,7 @@ internal class WeatherAssembler
                 dto.hourly!!.map {
                     HourlyWeatherEntity(
                         temperature = it.temp!!,
-                        timestamp = Instant.fromEpochMilliseconds(it.dt!!.toLong()),
+                        timestamp = Instant.fromEpochSeconds(it.dt!!.toLong()),
                         windSpeed = it.windSpeed!!,
                         windDirection = it.windDeg!!,
                     )

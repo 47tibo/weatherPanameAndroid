@@ -5,7 +5,7 @@ import androidx.compose.ui.platform.LocalContext
 import coil.compose.AsyncImage
 
 @Composable
-public fun SunPosition() {
+internal fun SunPosition() {
     val context = LocalContext.current
     val id =
         context.resources.getIdentifier(

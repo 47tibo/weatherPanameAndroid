@@ -5,11 +5,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-internal fun WeeklyWeatherScreen(temperature: String) {
+internal fun WeeklyWeatherScreen(uiState: WeeklyWeatherUiState.Success) {
     Column {
         Text(
-            text = "Current temp in Paris is : $temperature",
+            text = "current hourly weather available instant is : ${uiState.hours.first()}",
         )
-        SunPosition()
     }
 }

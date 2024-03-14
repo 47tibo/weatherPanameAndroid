@@ -2,7 +2,7 @@ package com.tibo47.weatherPaname.weeklyWeatherUi.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.tibo47.weatherPaname.weather.usecase.GetCurrentHourTemperatureUseCase
+import com.tibo47.weatherPaname.weather.usecase.GetTodayHoursUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
@@ -13,13 +13,13 @@ import javax.inject.Inject
 internal class WeeklyWeatherViewModel
     @Inject
     constructor(
-        private val getCurrentHourTemperatureUseCase: GetCurrentHourTemperatureUseCase,
+        private val getTodayHoursUseCase: GetTodayHoursUseCase,
     ) : ViewModel() {
-        val temperatureStateFlow =
-            getCurrentHourTemperatureUseCase().map { result ->
+        val uiState =
+            getTodayHoursUseCase().map { result ->
                 result.fold(
-                    onSuccess = { it.toString() },
-                    onFailure = { "error when accessing temp : $it" },
+                    onSuccess = { WeeklyWeatherUiState.Success(it) },
+                    onFailure = { WeeklyWeatherUiState.Failure },
                 )
-            }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(2_000, 0), "Loading...")
+            }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(2_000, 0), WeeklyWeatherUiState.Loading)
     }

@@ -7,7 +7,7 @@ import kotlinx.datetime.Instant
 import javax.inject.Inject
 
 /**
- * @return A list of hours for whom weather is available
+ * @return A list of hours (kotlin Instant) for whom weather in downtown Paris is available
  */
 @ViewModelScoped
 public class GetTodayHoursUseCase

@@ -38,9 +38,9 @@ class MainActivityTest {
 
     @OptIn(ExperimentalTestApi::class)
     @Test
-    fun test_temperature_displayed() {
+    fun test_current_hourly_weather_instant_displayed() {
         ActivityScenario.launch(MainActivity::class.java)
         composeTestRule.waitUntilDoesNotExist(hasText("Loading", true))
-        composeTestRule.onNodeWithText("Current temp in Paris is : 1515", true).assertIsDisplayed()
+        composeTestRule.onNodeWithText("current hourly weather available instant is : 2024-01-", true).assertIsDisplayed()
     }
 }
