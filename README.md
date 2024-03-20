@@ -16,12 +16,15 @@ Say bye to bad surprises when leaving the subway (or riding your bike).
 ### Code convention
 
 Ktlint via [kotlinter](https://github.com/jeremymailen/kotlinter-gradle).
-Personal choices :
+
+#### Personal choices :
 - for functions arguments, the default is positional. Indeed Android Studio gives enough intel on arguments.
 I use named arguments only for disambiguation, when optional arguments are in the function's signature.
+The exception is for Composable functions, where named arguments are **mandatory**.
 - for abbreviations, I use capitalize case, not screaming case. Eg : Dto, not DTO
 - tests files (unit and e2e) use `Test` in their names : as a prefix for _stubs_ and as suffix for _tests classes_
 - to avoid conflicts with Compose classes, I use the `Main` prefix (e.g `MainNavHost`)
+- for enum classes, I use capitalize case, not screaming case
 
 ### Weather data API
 

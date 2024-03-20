@@ -19,7 +19,7 @@ public fun NavGraphBuilder.weeklyWeatherScreen() {
         when (uiState) {
             WeeklyWeatherUiState.Failure -> Text(text = "Failure somewhere")
             WeeklyWeatherUiState.Loading -> Text(text = "Loading")
-            is WeeklyWeatherUiState.Success -> WeeklyWeatherScreen(uiState as WeeklyWeatherUiState.Success)
+            is WeeklyWeatherUiState.Success -> WeeklyWeatherScreen(uiState = uiState as WeeklyWeatherUiState.Success)
         }
     }
 }
