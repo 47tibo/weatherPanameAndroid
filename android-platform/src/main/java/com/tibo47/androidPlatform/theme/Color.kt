@@ -1,4 +1,4 @@
-package com.tibo47.weatherPaname.theme
+package com.tibo47.androidPlatform.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF65558F)

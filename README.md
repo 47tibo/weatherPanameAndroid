@@ -18,6 +18,8 @@ Say bye to bad surprises when leaving the subway (or riding your bike).
 Ktlint via [kotlinter](https://github.com/jeremymailen/kotlinter-gradle).
 
 #### Personal choices :
+
+- for packages' names I use camel case (not best practice, I wont do it on next projects).
 - for functions arguments, the default is positional. Indeed Android Studio gives enough intel on arguments.
 I use named arguments only for disambiguation, when optional arguments are in the function's signature.
 The exception is for Composable functions, where named arguments are **mandatory**.
@@ -82,8 +84,7 @@ They are under the `com.tibo47.weatherPaname` package.
 #### `app` component
 
 This component is at the lower level in the architecture. It bootstrap the main activity & application.
-It connects ui component (see bellow) via navigation. It contains material design 3 theme.
-Its android test target provides e2e tests.
+It connects ui component (see bellow) via navigation. Its android test target provides e2e tests.
 
 #### `weather` component
 
@@ -102,5 +103,11 @@ current weather.
 Under `com.tibo47.httpClient` package.
 
 Exposes a Retrofit factory with :
-- GsonConverterFactory
+- KotlinX serialization Json
 - HttpLoggingInterceptor
+
+#### `android-platform` component
+
+Under `com.tibo47.androidPlatform` package.
+
+It contains a preconfigured material design 3 theme and generic, non business oriented, ui components.

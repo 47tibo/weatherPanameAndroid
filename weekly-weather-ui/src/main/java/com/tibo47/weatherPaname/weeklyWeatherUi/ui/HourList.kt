@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
+import com.tibo47.androidPlatform.theme.MainTheme
 import com.tibo47.weatherPaname.extension.formatToRoundedTwentyFourHours
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
@@ -40,7 +41,9 @@ internal fun HourList(hours: List<Instant>) {
 private fun HourListPreview(
     @PreviewParameter(HoursPreviewParameterProvider::class) hours: List<Instant>,
 ) {
-    HourList(hours = hours)
+    MainTheme {
+        HourList(hours = hours)
+    }
 }
 
 private class HoursPreviewParameterProvider : PreviewParameterProvider<List<Instant>> {
