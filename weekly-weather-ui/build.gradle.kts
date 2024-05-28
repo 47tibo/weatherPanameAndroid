@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tibo47.weatherPaname.dailyWeatherUi"
+    namespace = "com.tibo47.weatherPaname.weeklyWeatherUi"
     compileSdk = 34
 
     defaultConfig {
