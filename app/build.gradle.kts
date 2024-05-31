@@ -1,8 +1,8 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.devtoolsKsp)
     id("com.google.dagger.hilt.android")
-    id ("com.google.devtools.ksp")
     id("org.jmailen.kotlinter")
     id("org.jetbrains.kotlinx.kover")
 }

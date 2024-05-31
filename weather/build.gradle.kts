@@ -2,11 +2,11 @@ import org.jmailen.gradle.kotlinter.tasks.FormatTask
 import org.jmailen.gradle.kotlinter.tasks.LintTask
 
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
-    id ("com.google.devtools.ksp")
+    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.jetbrainsKotlinPluginSerialization)
+    alias(libs.plugins.devtoolsKsp)
     id("com.google.dagger.hilt.android")
-    id("org.jetbrains.kotlin.plugin.serialization")
     id("org.openapi.generator")
     id("org.jmailen.kotlinter")
     id("org.jetbrains.kotlinx.kover")
