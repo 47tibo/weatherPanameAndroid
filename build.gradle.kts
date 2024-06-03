@@ -6,10 +6,10 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinPluginSerialization) apply false
 
     alias(libs.plugins.devtoolsKsp) apply false
-    id("com.google.dagger.hilt.android") version "2.48.1" apply false
+    alias(libs.plugins.daggerHiltAndroid) apply false
 
-    id("org.jmailen.kotlinter") version "4.1.1" apply false
-    id("org.jetbrains.kotlinx.kover") version "0.7.5" apply false
+    alias(libs.plugins.jmailenKotlinter) apply false
+    alias(libs.plugins.jetbrainsKotlinxKover) apply false
 
-    id("org.openapi.generator") version "7.2.0" apply false
+    alias(libs.plugins.openapiGenerator) apply false
 }

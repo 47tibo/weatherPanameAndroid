@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("org.jmailen.kotlinter")
-    id("org.jetbrains.kotlinx.kover")
+    alias(libs.plugins.jmailenKotlinter)
+    alias(libs.plugins.jetbrainsKotlinxKover)
 }
 
 android {

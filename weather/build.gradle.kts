@@ -6,10 +6,10 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.jetbrainsKotlinPluginSerialization)
     alias(libs.plugins.devtoolsKsp)
-    id("com.google.dagger.hilt.android")
-    id("org.openapi.generator")
-    id("org.jmailen.kotlinter")
-    id("org.jetbrains.kotlinx.kover")
+    alias(libs.plugins.daggerHiltAndroid)
+    alias(libs.plugins.jmailenKotlinter)
+    alias(libs.plugins.jetbrainsKotlinxKover)
+    alias(libs.plugins.openapiGenerator)
 }
 
 val fileTree = fileTree("src/main")

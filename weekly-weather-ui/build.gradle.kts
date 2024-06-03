@@ -2,9 +2,9 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.devtoolsKsp)
-    id("com.google.dagger.hilt.android")
-    id("org.jmailen.kotlinter")
-    id("org.jetbrains.kotlinx.kover")
+    alias(libs.plugins.daggerHiltAndroid)
+    alias(libs.plugins.jmailenKotlinter)
+    alias(libs.plugins.jetbrainsKotlinxKover)
 }
 
 android {
