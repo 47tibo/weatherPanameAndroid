@@ -44,6 +44,7 @@ kotlin {
 
 dependencies {
     implementation(project(":weather"))
+    implementation(project(":android-platform"))
 
     implementation(libs.dagger.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
@@ -53,6 +54,8 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.ui:ui-tooling-preview")
 
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
@@ -64,8 +67,4 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2")
 
     testImplementation(libs.junit)
-
-    debugImplementation(project(":android-platform"))
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-tooling-preview")
 }
