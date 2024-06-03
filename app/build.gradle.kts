@@ -65,11 +65,11 @@ dependencies {
     implementation(project(":weekly-weather-ui"))
     androidTestImplementation(project(":weather")) // for WeatherApi testing
 
-    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation(libs.androidx.navigation.compose)
 
-    implementation("com.google.dagger:hilt-android:2.50")
-    ksp("com.google.dagger:hilt-android-compiler:2.48.1")
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.50")
+    implementation(libs.dagger.hilt.android)
+    ksp(libs.dagger.hilt.android.compiler)
+    androidTestImplementation(libs.dagger.hilt.android.testing)
 
     testImplementation("junit:junit:4.13.2")
 

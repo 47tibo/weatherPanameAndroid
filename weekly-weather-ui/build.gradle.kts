@@ -45,9 +45,9 @@ kotlin {
 dependencies {
     implementation(project(":weather"))
 
-    implementation("com.google.dagger:hilt-android:2.50")
-    ksp("com.google.dagger:hilt-android-compiler:2.48.1")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation(libs.dagger.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    ksp(libs.dagger.hilt.android.compiler)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.material3)
