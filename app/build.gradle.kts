@@ -83,7 +83,7 @@ dependencies {
 
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2") // for Clock
 
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
     androidTestImplementation("com.squareup.retrofit2:retrofit:2.9.0") // for types

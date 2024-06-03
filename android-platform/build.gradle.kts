@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation("androidx.activity:activity-compose:1.8.2") // for WindowCompat.getInsetsController
-    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.activity.compose) // for WindowCompat.getInsetsController
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.material3)
 }
