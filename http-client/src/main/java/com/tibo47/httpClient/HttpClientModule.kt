@@ -15,9 +15,14 @@ import retrofit2.Retrofit
 @InstallIn(SingletonComponent::class)
 public object HttpClientModule {
     @Provides
-    public fun providesRetrofitBuilder(): Retrofit.Builder =
-        Retrofit.Builder()
-            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+    public fun providesRetrofitBuilder(): Retrofit.Builder {
+        val json =
+            Json {
+                ignoreUnknownKeys = true
+                prettyPrint = true
+            }
+        return Retrofit.Builder()
+            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
             .client(
                 OkHttpClient.Builder()
                     .addInterceptor(
@@ -25,4 +30,5 @@ public object HttpClientModule {
                     )
                     .build(),
             )
+    }
 }
