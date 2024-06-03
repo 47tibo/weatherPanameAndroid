@@ -89,7 +89,7 @@ openApiGenerate {
 dependencies {
     implementation(project(":http-client"))
 
-    testImplementation("junit:junit:4.13.2")
+    testImplementation(libs.junit)
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 
     implementation(libs.dagger.hilt.android)

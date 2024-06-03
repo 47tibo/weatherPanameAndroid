@@ -71,11 +71,10 @@ dependencies {
     ksp(libs.dagger.hilt.android.compiler)
     androidTestImplementation(libs.dagger.hilt.android.testing)
 
-    testImplementation("junit:junit:4.13.2")
-
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1") // for AndroidJUnitRunner
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core) // for AndroidJUnitRunner
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 
     androidTestImplementation("io.mockk:mockk:1.13.10")
     androidTestImplementation("io.mockk:mockk-android:1.13.10")
@@ -84,7 +83,6 @@ dependencies {
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2") // for Clock
 
     androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
     androidTestImplementation("com.squareup.retrofit2:retrofit:2.9.0") // for types
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
