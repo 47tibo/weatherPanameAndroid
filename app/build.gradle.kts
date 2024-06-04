@@ -75,15 +75,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core) // for AndroidJUnitRunner
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
 
     androidTestImplementation(libs.mockk)
     androidTestImplementation(libs.mockk.android)
     androidTestImplementation(libs.mockk.agent)
 
-    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2") // for Clock
+    androidTestImplementation(libs.kotlinx.datetime) // for Clock
 
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-
-    androidTestImplementation("com.squareup.retrofit2:retrofit:2.9.0") // for types
-    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    androidTestImplementation(libs.retrofit) // for types
+    androidTestImplementation(libs.okhttp.mockwebserver)
 }

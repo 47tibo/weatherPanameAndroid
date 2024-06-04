@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlinter)
     alias(libs.plugins.kover)
-    alias(libs.plugins.openapi.generator)
+    alias(libs.plugins.openapi)
 }
 
 val fileTree = fileTree("src/main")
@@ -100,5 +100,5 @@ dependencies {
 
     // for generated DTOs
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation(libs.retrofit)
 }

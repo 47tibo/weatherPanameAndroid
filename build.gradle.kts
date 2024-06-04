@@ -11,5 +11,5 @@ plugins {
     alias(libs.plugins.kotlinter) apply false
     alias(libs.plugins.kover) apply false
 
-    alias(libs.plugins.openapi.generator) apply false
+    alias(libs.plugins.openapi) apply false
 }
