@@ -28,6 +28,15 @@ The exception is for Composable functions, where named arguments are **mandatory
 - to avoid conflicts with Compose classes, I use the `Main` prefix (e.g `MainNavHost`)
 - for enum classes, I use capitalize case, not screaming case
 
+In version catalog, variables naming is inspired by `Now In Android` Google app. Variables' names format depend on type :
+
+- `[versions]` : camelcase, the shorter the better, eg `agp`, `ksp`. Sometimes prefixing can be necessary, eg `androidxEspresso`
+- `[libraries]` : kebabcase, merge groupId segments with nameId ones. Eg `{ group = "androidx.compose.material3", name = "material3" }`
+becomes `androidx-compose-material3`. If groupId's segments give no information, they should be discarded, eg `{ group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }`
+becomes `hilt-android-testing`. Examples of segments with low semantics : `com`, `google`, `io`, `dagger`, `jetbrains`
+- `[plugins]` : kebabcase, based on  the groupId, the shorter the better, eg `ksp`, `hilt`. Same names than in `[versions]` can be used. Prefix can be used
+for disambiguation, eg `android-application`
+
 ### Weather data API
 
 Weather data for Paris is retrieved from [OpenWeather](https://openweathermap.org/).
