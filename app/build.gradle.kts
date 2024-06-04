@@ -76,9 +76,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core) // for AndroidJUnitRunner
     androidTestImplementation(libs.androidx.ui.test.junit4)
 
-    androidTestImplementation("io.mockk:mockk:1.13.10")
-    androidTestImplementation("io.mockk:mockk-android:1.13.10")
-    androidTestImplementation("io.mockk:mockk-agent:1.13.10")
+    androidTestImplementation(libs.mockk)
+    androidTestImplementation(libs.mockk.android)
+    androidTestImplementation(libs.mockk.agent)
 
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2") // for Clock
 
