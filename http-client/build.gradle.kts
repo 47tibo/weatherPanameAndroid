@@ -40,6 +40,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.okhttp.logging)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit.kotlinx.serialization)
 }

@@ -96,9 +96,9 @@ dependencies {
     ksp(libs.hilt.android.compiler)
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2")
+    implementation(libs.kotlinx.datetime)
 
     // for generated DTOs
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit)
 }

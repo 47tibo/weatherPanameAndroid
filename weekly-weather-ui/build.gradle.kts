@@ -64,7 +64,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.6.0")
     implementation("io.coil-kt:coil-svg:2.6.0")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2")
+    implementation(libs.kotlinx.datetime)
 
     testImplementation(libs.junit)
 }
