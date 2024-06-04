@@ -90,12 +90,12 @@ dependencies {
     implementation(project(":http-client"))
 
     testImplementation(libs.junit)
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation(libs.androidx.junit)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.datetime)
 
     // for generated DTOs
