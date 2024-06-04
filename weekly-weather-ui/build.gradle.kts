@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.devtoolsKsp)
-    alias(libs.plugins.daggerHiltAndroid)
-    alias(libs.plugins.jmailenKotlinter)
-    alias(libs.plugins.jetbrainsKotlinxKover)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.kover)
 }
 
 android {
@@ -46,9 +46,9 @@ dependencies {
     implementation(project(":weather"))
     implementation(project(":android-platform"))
 
-    implementation(libs.dagger.hilt.android)
+    implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
-    ksp(libs.dagger.hilt.android.compiler)
+    ksp(libs.hilt.android.compiler)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.material3)

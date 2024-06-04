@@ -2,14 +2,14 @@ import org.jmailen.gradle.kotlinter.tasks.FormatTask
 import org.jmailen.gradle.kotlinter.tasks.LintTask
 
 plugins {
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.jetbrainsKotlinPluginSerialization)
-    alias(libs.plugins.devtoolsKsp)
-    alias(libs.plugins.daggerHiltAndroid)
-    alias(libs.plugins.jmailenKotlinter)
-    alias(libs.plugins.jetbrainsKotlinxKover)
-    alias(libs.plugins.openapiGenerator)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.plugin.serialization)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.kover)
+    alias(libs.plugins.openapi.generator)
 }
 
 val fileTree = fileTree("src/main")
@@ -92,8 +92,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 
-    implementation(libs.dagger.hilt.android)
-    ksp(libs.dagger.hilt.android.compiler)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2")

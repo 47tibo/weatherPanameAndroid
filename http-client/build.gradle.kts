@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.devtoolsKsp)
-    alias(libs.plugins.daggerHiltAndroid)
-    alias(libs.plugins.jmailenKotlinter)
-    alias(libs.plugins.jetbrainsKotlinxKover)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.kover)
 }
 
 android {
@@ -34,8 +34,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.dagger.hilt.android)
-    ksp(libs.dagger.hilt.android.compiler)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")

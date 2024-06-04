@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.devtoolsKsp)
-    alias(libs.plugins.daggerHiltAndroid)
-    alias(libs.plugins.jmailenKotlinter)
-    alias(libs.plugins.jetbrainsKotlinxKover)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.kover)
 }
 
 android {
@@ -67,9 +67,9 @@ dependencies {
 
     implementation(libs.androidx.navigation.compose)
 
-    implementation(libs.dagger.hilt.android)
-    ksp(libs.dagger.hilt.android.compiler)
-    androidTestImplementation(libs.dagger.hilt.android.testing)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    androidTestImplementation(libs.hilt.android.testing)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

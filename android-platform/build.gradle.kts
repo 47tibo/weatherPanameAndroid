@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.jmailenKotlinter)
-    alias(libs.plugins.jetbrainsKotlinxKover)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.kover)
 }
 
 android {
