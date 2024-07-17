@@ -62,6 +62,11 @@ Once the proper scheme is created, in order to generate the API, simply run :
 - Retrofit for network requests
 - Ktlint for linting, runs on pre-push
 - Kover for code coverage runs on Bitrise (release flavor)
+- Compose Preview Screenshot Testing, for `weekly-weather-ui` component. Run :
+
+```
+./gradlew :weekly-weather-ui:validateScreenshotTest
+```
 
 ### Application architecture
 
