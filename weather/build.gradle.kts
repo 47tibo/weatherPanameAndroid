@@ -101,4 +101,8 @@ dependencies {
     // for generated DTOs
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit)
+
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockk.agent)
 }
